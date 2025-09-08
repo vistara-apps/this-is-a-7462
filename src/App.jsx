@@ -1,4 +1,5 @@
 import React from 'react';
+import { OnchainProviders } from './providers/OnchainProviders';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import ProductShowcase from './components/ProductShowcase';
@@ -7,15 +8,17 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900">
-      <Navigation />
-      <main>
-        <Hero />
-        <ProductShowcase />
-        <Features />
-      </main>
-      <Footer />
-    </div>
+    <OnchainProviders>
+      <div className="min-h-screen bg-gray-900">
+        <Navigation />
+        <main>
+          <Hero />
+          <ProductShowcase />
+          <Features />
+        </main>
+        <Footer />
+      </div>
+    </OnchainProviders>
   );
 }
 

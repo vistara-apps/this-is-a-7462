@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Shield, ChevronDown } from 'lucide-react';
+import WalletConnect from './WalletConnect';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,8 +68,9 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Wallet Connect & CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <WalletConnect />
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105">
               Get Started
             </button>
@@ -98,6 +100,9 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
+              <div className="flex justify-center py-2">
+                <WalletConnect />
+              </div>
               <button className="w-full text-left bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-md hover:from-purple-600 hover:to-pink-600 transition-all duration-200 mt-4">
                 Get Started
               </button>
